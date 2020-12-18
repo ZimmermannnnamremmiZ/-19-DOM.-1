@@ -101,3 +101,5 @@ createTable(newDiv, 4, 4)
 // console.log(Numbering, objOfName, objOfEmail, objOfBalance)
 
 // users.reduce((el) => {for (let key in el) {console.log(key)}})
+
+???????
