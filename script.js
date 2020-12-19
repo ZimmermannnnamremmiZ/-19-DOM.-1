@@ -98,8 +98,6 @@ function createTable(parent, colones, rows) {
 
 createTable(newDiv, 4, 4)
 
-// console.log(Numbering, objOfName, objOfEmail, objOfBalance)
+console.log(Numbering, objOfName, objOfEmail, objOfBalance)
 
-// users.reduce((el) => {for (let key in el) {console.log(key)}})
-
-// ???????
+users.reduce((el) => {for (let key in el) {console.log(key)}})
