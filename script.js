@@ -45,7 +45,7 @@ const users = [{
   }
 ];
 
-// #
+// // #
 // const Numbering = users.map((e, index) => {
 //   return index + 1
 // })
@@ -68,7 +68,7 @@ const users = [{
 //   return acc
 // }, {})
 
-// const first = users[].reduce((acc, user, index) => {
+// const first = users.reduce((acc, user, index) => {
 //     acc[index + 1] = user.name;
 //     return acc
 //   }, {})
@@ -98,6 +98,8 @@ function createTable(parent, colones, rows) {
 
 createTable(newDiv, 4, 4)
 
-console.log(Numbering, objOfName, objOfEmail, objOfBalance)
 
-users.reduce((el) => {for (let key in el) {console.log(key)}})
+// users.reduce((el) => {for (let key in el) {console.log(key)}})
+
+console.log(document.querySelector('table'))
+
