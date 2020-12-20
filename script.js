@@ -50,63 +50,78 @@ const users = [{
 //   return index + 1
 // })
 
-// // Names
-// const objOfName = users.reduce((acc, user, index) => {
-//   acc[index + 1] = user.name;
-//   return acc
-// }, {})
+// // // Names
+// // const objOfName = users.reduce((acc, user, index) => {
+// //   acc[index + 1] = user.name;
+// //   return acc
+// // }, {})
 
-// // Emails
-// const objOfEmail = users.reduce((acc, user) => {
-//   acc[user.name] = user.email;
-//   return acc
-// }, {})
+// // // Emails
+// // const objOfEmail = users.reduce((acc, user) => {
+// //   acc[user.name] = user.email;
+// //   return acc
+// // }, {})
 
-// // Balances
-// const objOfBalance = users.reduce((acc, user) => {
-//   acc[user.name] = user.balance;
-//   return acc
-// }, {})
+// // // Balances
+// // const objOfBalance = users.reduce((acc, user) => {
+// //   acc[user.name] = user.balance;
+// //   return acc
+// // }, {})
 
-// const first = users.reduce((acc, user, index) => {
-//     acc[index + 1] = user.name;
-//     return acc
-//   }, {})
-
-
-
-// countainer
-const newDiv = document.createElement('div');
-newDiv.setAttribute("id", "tables")
-document.querySelector("body").appendChild(newDiv);
-
-// create Table
-function createTable(parent, colones, rows) {
-  let table = document.createElement('table');
-  for (let i = 0; i < rows; i++) {
-    let tr = document.createElement('tr');
-    for (let j = 0; j < colones; j++) {
-      let td = document.createElement('td');
-      tr.appendChild(td)
-    }
-    table.appendChild(tr)
-    let th = document.createElement('th');
-    // document.querySelector(table).appendChild(th)
-  }
-  parent.appendChild(table)
-}
-
-createTable(newDiv, 4, 4)
+// // const first = users.reduce((acc, user, index) => {
+// //     acc[index + 1] = user.name;
+// //     return acc
+// //   }, {})
 
 
-// users.reduce((el) => {for (let key in el) {console.log(key)}})
+
+// // countainer
+// const newDiv = document.createElement('div');
+// newDiv.setAttribute("id", "tables")
+// document.querySelector("body").appendChild(newDiv);
+
+// // create Table
+// function createTable(parent, colones, rows) {
+//   let table = document.createElement('table');
+//   for (let i = 0; i < rows; i++) {
+//     let tr = document.createElement('tr');
+//     for (let j = 0; j < colones; j++) {
+//       let td = document.createElement('td');
+//       tr.appendChild(td)
+//     }
+//     table.appendChild(tr)
+//     let th = document.createElement('th');
+//     // document.querySelector(table).appendChild(th)
+//   }
+//   parent.appendChild(table)
+// }
+
+// createTable(newDiv, 4, users.length)
+
+
+// // users.reduce((el) => {for (let key in el) {console.log(key)}})
 
 console.log(document.querySelector('table'))
 
-for (let i=0; i<users.length; i++) {
-  let name = users[i].name;
-  let email = users[i].email; 
-  let balance = users[i].balance;
+
+// for (let i=0; i<users.length; i++) {
+//   let td = document.querySelectorAll('td')
+//   let numbering = Numbering[i]
+//   let name = users[i].name;
+//   let email = users[i].email; 
+//   let balance = users[i].balance;
+var countSongs = users.length;
+var table = document.createElement('table');
+document.write('<div className="tracks-table"><table className="table">');
+for (var i = 0; i < countSongs; i++) {
+  var name = users[i].name;
+  var song = users[i].email;
+  var url = users[i].balance;
+  document.write('<tr className="mess-hide"><td className="name"><h4>' + name + '</h4></td><td className="song"><h4>' + song + '</h4></td><td className="url"><h4>' + url + '</h4></td></tr>');
 }
+
+document.write('</table></div>');
+
+
 
 
