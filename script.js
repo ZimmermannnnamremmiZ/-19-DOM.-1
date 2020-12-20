@@ -103,3 +103,10 @@ createTable(newDiv, 4, 4)
 
 console.log(document.querySelector('table'))
 
+for (let i=0; i<users.length; i++) {
+  let name = users[i].name;
+  let email = users[i].email; 
+  let balance = users[i].balance;
+}
+
+
