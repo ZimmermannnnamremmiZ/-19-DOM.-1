@@ -101,7 +101,7 @@ const users = [{
 
 // // users.reduce((el) => {for (let key in el) {console.log(key)}})
 
-console.log(document.querySelector('table'))
+// console.log(document.querySelector('table'))
 
 
 // for (let i=0; i<users.length; i++) {
@@ -110,14 +110,15 @@ console.log(document.querySelector('table'))
 //   let name = users[i].name;
 //   let email = users[i].email; 
 //   let balance = users[i].balance;
-var countSongs = users.length;
-var table = document.createElement('table');
+let countusers = users.length;
+let table = document.createElement('table');
 document.write('<div className="tracks-table"><table className="table">');
-for (var i = 0; i < countSongs; i++) {
-  var name = users[i].name;
-  var song = users[i].email;
-  var url = users[i].balance;
-  document.write('<tr className="mess-hide"><td className="name"><h4>' + name + '</h4></td><td className="song"><h4>' + song + '</h4></td><td className="url"><h4>' + url + '</h4></td></tr>');
+for (let i = 0; i < countusers; i++) {
+  let num = users.length[]
+  let name = users[i].name;
+  let email = users[i].email;
+  let balance = users[i].balance;
+  document.write('<tr className="mess-hide"><td className="num"><h4>' + num + '</h4></td><td className="name"><h4>' + name + '</h4></td><td className="song"><h4>' + email + '</h4></td><td className="url"><h4>' + balance + '</h4></td></tr>');
 }
 
 document.write('</table></div>');
