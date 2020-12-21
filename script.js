@@ -110,11 +110,29 @@ const users = [{
 //   let name = users[i].name;
 //   let email = users[i].email; 
 //   let balance = users[i].balance;
+
+
+let ths = [{
+  numbering: '#',
+  name: "Name",
+  email: 'Email',
+  balance: 'Balance'
+}];
+
+
+
 let countusers = users.length;
 let table = document.createElement('table');
 document.write('<div className="tracks-table"><table className="table">');
+for (let i = 0; i < ths.length; i++) {
+  let num = ths[i].numbering;
+  let nam = ths[i].name;
+  let ema = ths[i].email;
+  let bal = ths[i].balance;
+  document.write('<th><h4>' + num + '</h4></th><th><h4>' + nam + '</h4></th><th><h4>' + ema + '</h4></th><th><h4>' + bal + '</h4></th>');
+}
 for (let i = 0; i < countusers; i++) {
-  let num = users.length[]
+  let num = i + 1;
   let name = users[i].name;
   let email = users[i].email;
   let balance = users[i].balance;
