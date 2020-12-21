@@ -42,7 +42,7 @@ const users = [{
     "nestedField": {
       total: 200
     }
-  }
+  },
 ];
 
 // // #
@@ -112,6 +112,7 @@ const users = [{
 //   let balance = users[i].balance;
 
 
+
 let ths = [{
   numbering: '#',
   name: "Name",
@@ -138,6 +139,10 @@ for (let i = 0; i < countusers; i++) {
   let balance = users[i].balance;
   document.write('<tr className="mess-hide"><td className="num"><h4>' + num + '</h4></td><td className="name"><h4>' + name + '</h4></td><td className="song"><h4>' + email + '</h4></td><td className="url"><h4>' + balance + '</h4></td></tr>');
 }
+for (let i = 0; i < 1; i++) {
+  let res = users[i].balance;
+  document.write('<td></td><td></td><td></td><td><h4>' + res + '</h4></td>')
+};
 
 document.write('</table></div>');
 
