@@ -62,11 +62,11 @@ const users = [{
 // //   return acc
 // // }, {})
 
-// // // Balances
-// // const objOfBalance = users.reduce((acc, user) => {
-// //   acc[user.name] = user.balance;
-// //   return acc
-// // }, {})
+// Balances
+const objOfBalance = users.reduce((acc, user) => {
+  acc[user.name] = user.balance;
+  return acc
+}, {})
 
 // // const first = users.reduce((acc, user, index) => {
 // //     acc[index + 1] = user.name;
@@ -138,14 +138,16 @@ for (let i = 0; i < countusers; i++) {
   let email = users[i].email;
   let balance = users[i].balance;
   document.write('<tr className="mess-hide"><td className="num"><h4>' + num + '</h4></td><td className="name"><h4>' + name + '</h4></td><td className="song"><h4>' + email + '</h4></td><td className="url"><h4>' + balance + '</h4></td></tr>');
-}
-for (let i = 0; i < 1; i++) {
-  let res = users[i].balance;
-  document.write('<td></td><td></td><td></td><td><h4>' + res + '</h4></td>')
 };
-
+let res = 0;
+  for (let balance of Object.values(objOfBalance)) {
+    res += balance;
+  }
+  
+document.write('<td></td><td></td><td></td><td><h4>' + res + '</h4></td>')
 document.write('</table></div>');
 
 
 
 
+console.log(objOfBalance)
