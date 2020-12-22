@@ -45,73 +45,10 @@ const users = [{
   },
 ];
 
-// // #
-// const Numbering = users.map((e, index) => {
-//   return index + 1
-// })
-
-// // // Names
-// // const objOfName = users.reduce((acc, user, index) => {
-// //   acc[index + 1] = user.name;
-// //   return acc
-// // }, {})
-
-// // // Emails
-// // const objOfEmail = users.reduce((acc, user) => {
-// //   acc[user.name] = user.email;
-// //   return acc
-// // }, {})
-
-// Balances
 const objOfBalance = users.reduce((acc, user) => {
   acc[user.name] = user.balance;
   return acc
 }, {})
-
-// // const first = users.reduce((acc, user, index) => {
-// //     acc[index + 1] = user.name;
-// //     return acc
-// //   }, {})
-
-
-
-// // countainer
-// const newDiv = document.createElement('div');
-// newDiv.setAttribute("id", "tables")
-// document.querySelector("body").appendChild(newDiv);
-
-// // create Table
-// function createTable(parent, colones, rows) {
-//   let table = document.createElement('table');
-//   for (let i = 0; i < rows; i++) {
-//     let tr = document.createElement('tr');
-//     for (let j = 0; j < colones; j++) {
-//       let td = document.createElement('td');
-//       tr.appendChild(td)
-//     }
-//     table.appendChild(tr)
-//     let th = document.createElement('th');
-//     // document.querySelector(table).appendChild(th)
-//   }
-//   parent.appendChild(table)
-// }
-
-// createTable(newDiv, 4, users.length)
-
-
-// // users.reduce((el) => {for (let key in el) {console.log(key)}})
-
-// console.log(document.querySelector('table'))
-
-
-// for (let i=0; i<users.length; i++) {
-//   let td = document.querySelectorAll('td')
-//   let numbering = Numbering[i]
-//   let name = users[i].name;
-//   let email = users[i].email; 
-//   let balance = users[i].balance;
-
-
 
 let ths = [{
   numbering: '#',
@@ -119,8 +56,6 @@ let ths = [{
   email: 'Email',
   balance: 'Balance'
 }];
-
-
 
 let countusers = users.length;
 let table = document.createElement('table');
@@ -130,24 +65,26 @@ for (let i = 0; i < ths.length; i++) {
   let nam = ths[i].name;
   let ema = ths[i].email;
   let bal = ths[i].balance;
-  document.write('<th><h4>' + num + '</h4></th><th><h4>' + nam + '</h4></th><th><h4>' + ema + '</h4></th><th><h4>' + bal + '</h4></th>');
+  document.write('<th><h4>' + num + '</h4></th><td><h4>' + nam + '</h4></td><td><h4>' + ema + '</h4></td><td><h4>' + bal + '</h4></td>');
 }
 for (let i = 0; i < countusers; i++) {
   let num = i + 1;
   let name = users[i].name;
   let email = users[i].email;
   let balance = users[i].balance;
-  document.write('<tr className="mess-hide"><td className="num"><h4>' + num + '</h4></td><td className="name"><h4>' + name + '</h4></td><td className="song"><h4>' + email + '</h4></td><td className="url"><h4>' + balance + '</h4></td></tr>');
+  document.write('<tr className="tr"><td className="td"><h4>' + num + '</h4></td><td className="td"><h4>' + name + '</h4></td><td className="td"><h4>' + email + '</h4></td><td className="td"><h4>' + balance + '</h4></td></tr>');
 };
 let res = 0;
   for (let balance of Object.values(objOfBalance)) {
     res += balance;
   }
   
-document.write('<td></td><td></td><td></td><td><h4>' + res + '</h4></td>')
+document.write('<td></td><td></td><td></td><td><h4>' + 'Total balance: ' + res + '</h4></td>')
 document.write('</table></div>');
 
-
-
-
-console.log(objOfBalance)
+let tds = document.querySelectorAll('td');
+tds.forEach((e) => {e.style.cssText = `padding: 20px 100px; border: 1px solid rgb(197, 196, 196); border-left: none; border-right: none; border-bottom: none;`;})
+let tab = document.querySelector('table');
+tab.style.cssText = `padding: 20px 100px; border: 1px solid rgb(197, 196, 196); border-collapse: collapse; border-left: none; border-right: none; border-bottom: none;`
+let th = document.querySelector('th');
+th.style.cssText = `padding: 20px 100px; border: 1px solid rgb(197, 196, 196); border-left: none; border-right: none; border-bottom: none;`
