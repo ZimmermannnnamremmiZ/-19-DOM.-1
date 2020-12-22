@@ -75,15 +75,17 @@ for (let i = 0; i < countusers; i++) {
   document.write('<tr className="tr"><td className="td"><h4>' + num + '</h4></td><td className="td"><h4>' + name + '</h4></td><td className="td"><h4>' + email + '</h4></td><td className="td"><h4>' + balance + '</h4></td></tr>');
 };
 let res = 0;
-  for (let balance of Object.values(objOfBalance)) {
-    res += balance;
-  }
-  
+for (let balance of Object.values(objOfBalance)) {
+  res += balance;
+}
+
 document.write('<td></td><td></td><td></td><td><h4>' + 'Total balance: ' + res + '</h4></td>')
 document.write('</table></div>');
 
 let tds = document.querySelectorAll('td');
-tds.forEach((e) => {e.style.cssText = `padding: 20px 100px; border: 1px solid rgb(197, 196, 196); border-left: none; border-right: none; border-bottom: none;`;})
+tds.forEach((e) => {
+  e.style.cssText = `padding: 20px 100px; border: 1px solid rgb(197, 196, 196); border-left: none; border-right: none; border-bottom: none;`;
+})
 let tab = document.querySelector('table');
 tab.style.cssText = `padding: 20px 100px; border: 1px solid rgb(197, 196, 196); border-collapse: collapse; border-left: none; border-right: none; border-bottom: none;`
 let th = document.querySelector('th');
